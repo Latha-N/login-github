@@ -1,4 +1,4 @@
-const authInitialState = {loggedIn: false, register: false}
+const authInitialState = { register: false}
 
 const userReducer = (state=authInitialState, action) => {
     switch(action.type){
@@ -8,11 +8,11 @@ const userReducer = (state=authInitialState, action) => {
         }
 
         case 'LOGIN':{
-            return {...state,...action.payload, loggedIn: true}
+            return {...state,...action.payload}
         }
 
         case 'LOGGED_IN':{
-            return {...state, loggedIn: true}            
+            return {...state}            
         }
 
         case 'LOGOUT':{
