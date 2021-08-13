@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {React, useState} from 'react';
 import { asyncLoginUser } from './actions/userAction'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { FaGithub } from 'react-icons/fa';
 
 
