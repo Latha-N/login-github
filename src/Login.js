@@ -7,23 +7,22 @@ import { FaGithub } from 'react-icons/fa';
 
 const Login = (props) => {
     const dispatch = useDispatch()
-    //const loggedIn = useSelector(state=>state.user.loggedIn)
     const [username, setUsername] = useState('')
     const [user, setUser] = useState(null)
+
     const submitForm = (e)=>{
         e.preventDefault()
         axios.get(`https://api.github.com/users/${username}`)
         .then((response)=>{
             setUser(response.data)
-            dispatch(asyncLoginUser(response.data, props.histroy))
+            dispatch(asyncLoginUser(response.data))
         }).catch(err => console.log(err))
 
     }
     const handleChange = (e) =>{
-        // e.persistance()
         setUsername(e.target.value)
-
     }
+
     return (
         <div>
             {user?.login ?<div> <h2>Success !!!</h2><p>{user.name}</p> <img  src={`${user.avatar_url}`} alt="some"/> </div>:

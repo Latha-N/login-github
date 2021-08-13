@@ -3,10 +3,6 @@ const authInitialState = { register: false}
 const userReducer = (state=authInitialState, action) => {
     switch(action.type){
 
-        case 'REGISTER':{
-            return {...state, register: true}
-        }
-
         case 'LOGIN':{
             return {...state,...action.payload}
         }

@@ -12,10 +12,7 @@ import { useDispatch } from 'react-redux'
      dispatch(resetState())
      props.history.push('/')
    }
-   const linkChange = (e) =>{
-     e.preventDefault()
-     props.history.push(`${e.target.outerText.toLowerCase()}`)
-   }
+   
     return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
   <Container>
@@ -23,7 +20,7 @@ import { useDispatch } from 'react-redux'
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-    <Nav.Link href="/dashboard" onClick={linkChange}>Dashboard</Nav.Link>
+    <Nav.Link href="/dashboard" >Dashboard</Nav.Link>
     <Nav.Link href="/" >Home</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
