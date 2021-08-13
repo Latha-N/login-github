@@ -7,7 +7,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const Login = (props) => {
     const dispatch = useDispatch()
-    const loggedIn = useSelector(state=>state.user.loggedIn)
+    //const loggedIn = useSelector(state=>state.user.loggedIn)
     const [username, setUsername] = useState('')
     const [user, setUser] = useState(null)
     const submitForm = (e)=>{
